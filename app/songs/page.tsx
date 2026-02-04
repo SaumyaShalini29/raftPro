@@ -1,6 +1,7 @@
 import { getTracks, getUniqueGenres, getUniqueMoods } from '@/lib/data';
 import { SongsListClient } from '@/components/SongsListClient';
 import { Metadata } from 'next';
+import { Track } from '@/lib/types';
 
 export const metadata: Metadata = {
   title: 'Songs | Indie Music Directory',
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 export default async function SongsPage() {
-  const tracks = await getTracks();
+  const tracks = (await getTracks()) as Track[];
   const genres = getUniqueGenres(tracks);
   const moods = getUniqueMoods(tracks);
 
