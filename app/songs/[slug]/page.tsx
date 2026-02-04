@@ -12,8 +12,8 @@ interface SongPageProps {
 }
 
 export async function generateStaticParams() {
-  const tracks = await getTracks();
-  return tracks.map((track: Track) => ({
+  const tracks = (await getTracks()) as Track[];
+  return tracks.map((track) => ({
     slug: track.slug,
   }));
 }
