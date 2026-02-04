@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import tracks from '@/data/tracks.json';
 import { SongCard } from '@/components/SongCard';
+import { Track } from '@/lib/types';
 
 export const metadata: Metadata = {
   title: 'Indie Music Directory - Discover Independent Music',
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
 };
 
 // Helper to get featured tracks (first 6 sorted by year desc)
-function getFeaturedTracks() {
+function getFeaturedTracks(): Track[] {
   return (tracks as Track[])
     .sort((a, b) => b.releaseYear - a.releaseYear)
     .slice(0, 6);
