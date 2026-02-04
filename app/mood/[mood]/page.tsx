@@ -18,7 +18,7 @@ const moodDescriptions: Record<string, string> = {
 };
 
 export async function generateStaticParams() {
-  const tracks = await getTracks();
+  const tracks = (await getTracks()) as Track[];
   const moods = getUniqueMoods(tracks);
 
   return moods.map((mood) => ({

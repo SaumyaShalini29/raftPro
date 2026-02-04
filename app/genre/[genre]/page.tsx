@@ -20,7 +20,7 @@ const genreDescriptions: Record<string, string> = {
 };
 
 export async function generateStaticParams() {
-  const tracks = await getTracks();
+  const tracks = (await getTracks()) as Track[];
   const genres = getUniqueGenres(tracks);
 
   return genres.map((genre) => ({
