@@ -33,8 +33,8 @@ export async function generateMetadata({ params }: MoodPageProps): Promise<Metad
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 
-  const tracks = await getTracks();
-  const matchingTracks = tracks.filter((track: Track) => track.mood === moodDecoded);
+  const tracks = (await getTracks()) as Track[];
+  const matchingTracks = tracks.filter((track) => track.mood === moodDecoded);
 
   return {
     title: `${moodDecoded} Music | Indie Music Directory`,
@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: MoodPageProps): Promise<Metad
 
 export default async function MoodPage({ params }: MoodPageProps) {
   const { mood } = await params;
-  const tracks = await getTracks();
+  const tracks = (await getTracks()) as Track[];
 
   const moodDecoded = decodeURIComponent(mood)
     .split('-')

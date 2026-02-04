@@ -35,8 +35,8 @@ export async function generateMetadata({ params }: GenrePageProps): Promise<Meta
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 
-  const tracks = await getTracks();
-  const matchingTracks = tracks.filter((track: Track) => track.genre === genreDecoded);
+  const tracks = (await getTracks()) as Track[];
+  const matchingTracks = tracks.filter((track) => track.genre === genreDecoded);
 
   return {
     title: `${genreDecoded} Music | Indie Music Directory`,
@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: GenrePageProps): Promise<Meta
 
 export default async function GenrePage({ params }: GenrePageProps) {
   const { genre } = await params;
-  const tracks = await getTracks();
+  const tracks = (await getTracks()) as Track[];
 
   const genreDecoded = decodeURIComponent(genre)
     .split('-')
