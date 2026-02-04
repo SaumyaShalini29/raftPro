@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 // Helper to get featured tracks (first 6 sorted by year desc)
 function getFeaturedTracks() {
-  return tracks
+  return (tracks as Track[])
     .sort((a, b) => b.releaseYear - a.releaseYear)
     .slice(0, 6);
 }
@@ -33,7 +33,7 @@ function getFeaturedTracks() {
 // Helper to get genres with counts
 function getGenresWithCounts() {
   const genreMap = new Map<string, number>();
-  tracks.forEach((track) => {
+  (tracks as Track[]).forEach((track) => {
     genreMap.set(track.genre, (genreMap.get(track.genre) || 0) + 1);
   });
   return Array.from(genreMap.entries())
@@ -44,7 +44,7 @@ function getGenresWithCounts() {
 // Helper to get moods with counts
 function getMoodsWithCounts() {
   const moodMap = new Map<string, number>();
-  tracks.forEach((track) => {
+  (tracks as Track[]).forEach((track) => {
     moodMap.set(track.mood, (moodMap.get(track.mood) || 0) + 1);
   });
   return Array.from(moodMap.entries())
