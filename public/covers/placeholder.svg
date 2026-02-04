@@ -1,0 +1,32 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" rx="24" fill="url(#bg)"/>
+  <rect x="-200" y="140" width="1600" height="120" fill="url(#shine)"/>
+  <rect x="-200" y="320" width="1600" height="120" fill="url(#shine)"/>
+  <rect x="-200" y="500" width="1600" height="120" fill="url(#shine)"/>
+  <g fill="#FFFFFF" fill-opacity="0.9">
+    <circle cx="240" cy="560" r="78"/>
+    <circle cx="400" cy="560" r="52"/>
+    <rect x="500" y="420" width="60" height="260" rx="16"/>
+    <rect x="600" y="360" width="60" height="320" rx="16"/>
+    <rect x="700" y="460" width="60" height="220" rx="16"/>
+    <rect x="800" y="400" width="60" height="280" rx="16"/>
+    <rect x="900" y="480" width="60" height="200" rx="16"/>
+  </g>
+  <text x="72" y="120" font-family="Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="56" fill="#FFFFFF" fill-opacity="0.95">
+    Indie Music Directory
+  </text>
+  <text x="72" y="190" font-family="Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="28" fill="#FFFFFF" fill-opacity="0.75">
+    Cover art placeholder
+  </text>
+</svg>

@@ -1,5 +1,100 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+# Indie Music Directory
+
+## Project Overview
+This project is an Indie Music Directory, a content-driven website that helps users discover independent music tracks and artists based on genre, mood, and year.
+
+## Dataset
+- The dataset is a static JSON file representing indie music tracks.
+- Each track includes:
+  - id
+  - title
+  - slug
+  - artist
+  - genre (Indie, Pop, Rock, Lo-fi, etc.)
+  - mood (Chill, Sad, Energetic, Focus)
+  - releaseYear
+  - coverImage
+  - externalLink (Spotify / YouTube)
+
+## Tech Stack
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- ESLint + Prettier
+- Deployment on Vercel
+
+## Pages
+1. **Home Page**: Clear headline, description, featured tracks, and CTA button.
+2. **Song Listing Page**: Display all tracks with search and filter options.
+3. **Song Detail Page**: Programmatically generated for each song with detailed information.
+4. **Derived Pages**: Genre, mood, and year pages generated from the dataset.
+
+## Global UI
+- Clean navigation and footer with project description and links.
+- Fully responsive design with dark mode support.
+
+## SEO & Performance
+- Static generation and SEO-ready metadata.
+
+## AI Usage
+- AI tools will be used for dataset generation, page scaffolding, and design inspiration.
+
+## Deliverables
+- GitHub repository
+- Live Vercel deployment URL
+- README with project details and AI prompt examples.
+
+## Improvements
+- List potential improvements for future iterations.
+
+This project is an Indie Music Directory, a content-driven website that helps users discover independent music tracks and artists based on genre, mood, and year.
+
+## Dataset
+- The dataset is a static JSON file representing indie music tracks.
+- Each track includes:
+  - id
+  - title
+  - slug
+  - artist
+  - genre (Indie, Pop, Rock, Lo-fi, etc.)
+  - mood (Chill, Sad, Energetic, Focus)
+  - releaseYear
+  - coverImage
+  - externalLink (Spotify / YouTube)
+
+## Tech Stack
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- ESLint + Prettier
+- Deployment on Vercel
+
+## Pages
+1. **Home Page**: Clear headline, description, featured tracks, and CTA button.
+2. **Song Listing Page**: Display all tracks with search and filter options.
+3. **Song Detail Page**: Programmatically generated for each song with detailed information.
+4. **Derived Pages**: Genre, mood, and year pages generated from the dataset.
+
+## Global UI
+- Clean navigation and footer with project description and links.
+- Fully responsive design with dark mode support.
+
+## SEO & Performance
+- Static generation and SEO-ready metadata.
+
+## AI Usage
+- AI tools will be used for dataset generation, page scaffolding, and design inspiration.
+
+## Deliverables
+- GitHub repository
+- Live Vercel deployment URL
+- README with project details and AI prompt examples.
+
+## Improvements
+- List potential improvements for future iterations.
+
 ## Getting Started
 
 First, run the development server:
